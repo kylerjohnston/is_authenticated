@@ -20,6 +20,6 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.is_authenticated, name='is_authenticated'),
+    path('auth/', views.is_authenticated, name='is_authenticated'),
     path('accounts/', include('django.contrib.auth.urls'))
 ]
