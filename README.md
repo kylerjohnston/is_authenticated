@@ -45,6 +45,18 @@ cd /srv/is_authenticated/is_authenticated && \
   gunicorn is_authenticated.wsgi --bind 127.0.0.1:8000 --workers 1
 ```
 
+## Create a user
+
+After installing, you can use `./manage.py createsuperuser` to create a new admin user.
+
+``` shell
+$ source /srv/is_authenticated/venv/bin/activate
+$ cd /srv/is_authenticated/is_authenticated/
+$ ./manage.py createsuperuser
+```
+
+Then you can sign in at the `/admin/` endpoint to create other users, if needed.
+
 ## Using with the NGINX auth_request module
 
 Let's say you have an app without authentication, with NGINX set up as a reverse
